@@ -60,7 +60,7 @@ public class CSVtoTxtForjsp {
 						comm = strs[5];
 					}
 					String[] comms = comm.split("\"");
-					bw.write(comms[1]);
+					bw.write(comms[1]+": ");
 					System.out.print(comms[1] + ": ");
 					// model
 					String[] instr = strs[0].split("\"");
