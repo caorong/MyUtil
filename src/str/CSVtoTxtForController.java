@@ -35,7 +35,7 @@ public class CSVtoTxtForController {
 					} else {
 						instr = strs[5];
 					}
-					bw.write(instr);
+					bw.write(instr+",");
 					System.out.print(instr.toLowerCase() + ",");
 				} else {
 					count--;
