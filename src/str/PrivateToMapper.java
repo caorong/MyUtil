@@ -24,7 +24,7 @@ public class PrivateToMapper {
 		BufferedReader br;
 		try {
 			br = new BufferedReader(new FileReader(csv));
-			FileWriter fw = new FileWriter(new File("c:\\out.txt"));
+			FileWriter fw = new FileWriter(new File("c:\\mapper.txt"));
 			BufferedWriter bw = new BufferedWriter(fw);
 			// 读取直到最后一行
 			String line = "";
