@@ -21,7 +21,7 @@ public class CSVtoTxtForController {
 		try {
 			//组中文comment
 			br = new BufferedReader(new FileReader(csv));
-			FileWriter fw = new FileWriter(new File("c:\\comment.txt"));
+			FileWriter fw = new FileWriter(new File("c:\\Controller.txt"));
 			BufferedWriter bw = new BufferedWriter(fw);
 			// 读取直到最后一行
 			String line = "";
@@ -69,11 +69,12 @@ public class CSVtoTxtForController {
 			bw.newLine();
 			System.out.println();
 			
-			
+			bw.write("***********************************Master表专用********************************************");
+			bw.newLine();
 			//***********************************Master表专用********************************************************
 			//Master的bean的值转null   
 			//********全局参数************
-			String beanName = "m_E101_model";
+			String beanName = "m_E313_model";
 			br = new BufferedReader(new FileReader(csv));
 			count = 1;
 			while ((line = br.readLine()) != null) {

@@ -46,6 +46,8 @@ public class CSVtoTxtForjsp {
 				}
 			}
 			bw.newLine();
+			bw.newLine();
+			System.out.println();
 			
 			// title
 			count = 1;
@@ -74,6 +76,7 @@ public class CSVtoTxtForjsp {
 				}
 			}
 			bw.newLine();
+			bw.newLine();
 			System.out.println();
 //			br.close();
 
@@ -92,6 +95,7 @@ public class CSVtoTxtForjsp {
 					count--;
 				}
 			}
+			bw.newLine();
 			bw.newLine();
 			System.out.println();
 			
@@ -124,6 +128,7 @@ public class CSVtoTxtForjsp {
 				}
 			}
 			bw.newLine();
+			bw.newLine();
 			System.out.println();
 			
 			//master用的 tb循环
@@ -155,6 +160,7 @@ public class CSVtoTxtForjsp {
 				}
 			}
 			bw.newLine();
+			bw.newLine();
 			System.out.println();
 			
 			//title For Master  无&#10版
@@ -183,6 +189,7 @@ public class CSVtoTxtForjsp {
 					count--;
 				}
 			}
+			bw.newLine();
 			bw.newLine();
 			System.out.println();
 			
@@ -217,16 +224,16 @@ public class CSVtoTxtForjsp {
 					bw.write("\t\t\t\t\t<td><input id=\""+instr[1].toLowerCase()+"\" name=\""+instr[1].toLowerCase()+"\" type=\"text\" value=\"${model."+instr[1].toLowerCase()+"}\" /></td>");
 					bw.newLine();
 					System.out.println("<td><input id=\""+instr[1].toLowerCase()+"\" name=\""+instr[1].toLowerCase()+"\" type=\"text\" value=\"${model."+instr[1].toLowerCase()+"}\" /></td>");
-					bw.write("\t\t\t\t<tr>");
+					bw.write("\t\t\t\t</tr>");
 					bw.newLine();
-					System.out.println("<tr>");
+					System.out.println("</tr>");
 				} else {
 					count--;
 				}
 			}
 			bw.newLine();
 			bw.newLine();
-			bw.write("************************************************************");
+			bw.write("************************************** Master ************************************");
 			bw.newLine();
 			System.out.println();
 			
@@ -295,14 +302,12 @@ public class CSVtoTxtForjsp {
 			e.printStackTrace();
 		}
 		
-		
-		
 	}
-	
-	public static String getTab(int num){
+
+	public static String getTab(int num) {
 		String ans = "";
 		for (int i = 0; i < num; i++) {
-			ans+="\t";
+			ans += "\t";
 		}
 		return ans;
 	}

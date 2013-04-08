@@ -64,7 +64,9 @@ public class CSVtoMapper {
 				}
 			}
 			bw.newLine();
+			bw.newLine();
 			System.out.println();
+			
 			
 			// insert
 			bw.write("\t\t\tINSERT INTO xxxxxx_xxxx  (");
@@ -97,9 +99,9 @@ public class CSVtoMapper {
 				bw.write("\t\t\t<if test=\""+upCases.get(i).toLowerCase()+"!=null\">");
 				bw.newLine();
 				System.out.println("<if test=\""+upCases.get(i).toLowerCase()+"!=null\">");
-				bw.write("\t\t\t\t<![CDATA[ "+upCases.get(i)+"=#{"+upCases.get(i).toLowerCase()+"} ]]>");
+				bw.write("\t\t\t\tAND <![CDATA[ "+upCases.get(i)+"=#{"+upCases.get(i).toLowerCase()+"} ]]>");
 				bw.newLine();
-				System.out.println("<![CDATA[ "+upCases.get(i)+"=#{"+upCases.get(i).toLowerCase()+"} ]]>");
+				System.out.println("AND <![CDATA[ "+upCases.get(i)+"=#{"+upCases.get(i).toLowerCase()+"} ]]>");
 				bw.write("\t\t\t</if>");
 				bw.newLine();
 				System.out.println("</if>");
@@ -109,8 +111,8 @@ public class CSVtoMapper {
 			
 			//queryById
 //			SELECT * FROM TCHL_DAY_SYSTEM where ID=#{id} 
-			bw.write("\t\t\tSELECT * FROM xxx_xxxx where "+upCases.get(0)+"=#{"+upCases.get(0)+"} ");
-			System.out.println("\t\t\tSELECT * FROM xxx_xxxx where "+upCases.get(0)+"=#{"+upCases.get(0)+"} ");
+			bw.write("\t\t\tSELECT * FROM xxx_xxxx where "+upCases.get(0)+"=#{"+upCases.get(0).toLowerCase()+"} ");
+			System.out.println("\t\t\tSELECT * FROM xxx_xxxx where "+upCases.get(0)+"=#{"+upCases.get(0).toLowerCase()+"} ");
 			bw.newLine();
 			bw.newLine();
 			
@@ -145,7 +147,7 @@ public class CSVtoMapper {
 			
 			//delete  
 //			DELETE FROM TCHL_DAY_SYSTEM WHERE ID=#{id}
-			bw.write("\t\t\tDELETE * FROM xxx_xxxx WHERE "+upCases.get(0)+"=#{"+upCases.get(0).toLowerCase()+"}");
+			bw.write("\t\t\tDELETE FROM xxx_xxxx WHERE "+upCases.get(0)+"=#{"+upCases.get(0).toLowerCase()+"}");
 			bw.newLine();
 			System.out.println("DELETE FROM xxx_xxxx WHERE "+upCases.get(0)+"=#{"+upCases.get(0).toLowerCase()+"}");
 			
